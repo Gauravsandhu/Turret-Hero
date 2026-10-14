@@ -4,13 +4,19 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     
-   [SerializeField] private Transform target;
+    private Transform target;
   [SerializeField] private float moveSpeed = 1.5f;
    private Rigidbody2D _rb;
 
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+    }
+
+
+    public void SetTarget(Transform newTarget)
+    {
+        target = newTarget;
     }
 
 
